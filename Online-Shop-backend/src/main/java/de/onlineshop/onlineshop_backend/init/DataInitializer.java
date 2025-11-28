@@ -21,21 +21,21 @@ public class DataInitializer {
                         "Campus Hoodie",
                         "Bequemer Hoodie mit Unilogo",
                         new BigDecimal("49.90"),
-                        "https://example.com/images/hoodie.png"
+                        "/images/hoodie.jpg"       // <- WICHTIG: Pfad im Frontend-public
                 );
 
                 Product p2 = new Product(
-                        "Kaffeetasse",
+                        "Kaffeetasse ?",
                         "Weiße Tasse mit CampusShop-Logo",
                         new BigDecimal("12.50"),
-                        "https://example.com/images/mug.png"
+                        "/images/mug.jpg"
                 );
 
                 Product p3 = new Product(
                         "Notizbuch",
                         "DIN A5 Notizbuch kariert",
                         new BigDecimal("7.90"),
-                        "https://example.com/images/notebook.png"
+                        "/images/notebook.png"
                 );
 
                 productRepository.saveAll(List.of(p1, p2, p3));

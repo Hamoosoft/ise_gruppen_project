@@ -6,7 +6,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+//Frontent → Backend Aufrufe erlauben.
+@CrossOrigin(origins = "http://localhost:5173")  // <--- NEU
 @RestController
 @RequestMapping("/api/products")
 public class ProductController {
