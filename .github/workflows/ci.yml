@@ -39,19 +39,19 @@ jobs:
           node-version: '20'
 
       - name: Install Dependencies
-        working-directory: ./Online-Shop-frontend
+        working-directory: ./online-shop-frontend
         run: npm ci
 
       - name: Lint Code
-        working-directory: ./Online-Shop-frontend
+        working-directory: ./online-shop-frontend
         run: npm run lint || echo "Lint warnings found"
 
       - name: Security Audit
-        working-directory: ./Online-Shop-frontend
+        working-directory: ./online-shop-frontend
         run: npm audit --audit-level=moderate || true
 
       - name: Build Frontend
-        working-directory: ./Online-Shop-frontend
+        working-directory: ./online-shop-frontend
         run: npm run build
 
   security:
