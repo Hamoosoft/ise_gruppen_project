@@ -25,7 +25,7 @@ jobs:
         run: mvn -B clean test
 
       - name: OWASP Dependency Check
-        uses: dependency-check/Dependency-Check_Action@v4.0.0
+        uses: dependency-check/Dependency-Check_Action@v3.0.3
         with:
           project: "onlineshop-backend"
           path: "./Online-Shop-backend"
@@ -52,17 +52,17 @@ jobs:
           node-version: '20'
 
       - name: Install dependencies
-        working-directory: ./Online-Shop-frontend
+        working-directory: ./online-shop-frontend
         run: npm ci
 
       - name: Lint code
-        working-directory: ./Online-Shop-frontend
+        working-directory: ./online-shop-frontend
         run: npm run lint || echo "Lint warnings found"
 
       - name: Security audit
-        working-directory: ./Online-Shop-frontend
+        working-directory: ./online-shop-frontend
         run: npm audit --audit-level=moderate || true
 
       - name: Build frontend
-        working-directory: ./Online-Shop-frontend
+        working-directory: ./online-shop-frontend
         run: npm run build
